@@ -20,12 +20,22 @@
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
 </head>
-
+<script>
+$(document).ready(function(){
+    $("#mijnKenteken").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $('tbody tr').filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });
+  </script>
 <body>
     <div class="row justify-content-center">
         <div class="col-lg-8">
             <div class="text-center">
                 <h3>Gekentekende voertuigen API:</h3>
+                <input class="form-control" id="mijnKenteken" type="text" placeholder="Zoek uw kenteken...">
                 <div class="table-responsive">
                     <table class="table table-bordered table-wrapper-scroll-y my-custom-scrollbar">
                         <thead style="position: sticky;top: 0">
