@@ -12,6 +12,8 @@ request.onload = function () {
     $.each(data, function (i, status) {
         statusHTML += '<tr>';
         statusHTML += '<td>' + status.kenteken + '</td>';
+        statusHTML += '<td>' + status.merk + '</td>';
+        statusHTML += '<td>' + status.voertuigsoort + '</td>';
         statusHTML += '</tr>';
     });
     $('tbody').html(statusHTML);
