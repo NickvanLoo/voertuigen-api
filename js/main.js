@@ -14,6 +14,8 @@ request.onload = function () {
         statusHTML += '<td>' + status.kenteken + '</td>';
         statusHTML += '<td>' + status.merk + '</td>';
         statusHTML += '<td>' + status.voertuigsoort + '</td>';
+        statusHTML += '<td>' + status.tellerstandoordeel + '</td>';
+        statusHTML += '<td>' + status.datum_eerste_tenaamstelling_in_nederland + '</td>';
         statusHTML += '</tr>';
     });
     $('tbody').html(statusHTML);
